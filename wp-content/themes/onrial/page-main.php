@@ -215,56 +215,40 @@ get_header(); ?>
                 <div class="news-inner">
                     <span class="news-block__title">Последние новости</span>
                     <ul class="news-block__list">
-                        <li class="news-block__item">
-                            <div class="news-block__pic-wrapper">
-                                <img class="news-block__pic" src="/wp-content/themes/onrial/images/news/1.jpg" alt="">
-                            </div>
-                            <div class="news-block__info-wrapper">
-                                <a class="news-block__item-title" href="">Продажа новогодних ёлок</a>
-                                <div class="news-block__item-txt">Совсем скоро всех нас закружит Новогодняя кутерьма. Все мы, как в детстве, ждём волшебства. До Нового года осталось совсем немного, а Вы ещё не задумывались о проведении праздника?</div>
-                                <div class="news-block__item-footer">
-                                    <span class="news-block__item-date-wrapper">
-                                        <i class="news-block__item-date-icon"></i>
-                                        <span class="news-block__item-date-txt">29.12.2017</span>
-                                    </span>
-                                    <a class="news-block__item-btn" href="">Читать полностью</a>
+                        <?php  $args = array(
+                            'numberposts' => 3,
+                            'category'    => 'news',
+                            'orderby'     => 'date',
+                            'order'       => 'DESC',
+                            'include'     => array(),
+                            'exclude'     => array(),
+                            'meta_key'    => '',
+                            'meta_value'  =>'',
+                            'post_type'   => 'post',
+                            'suppress_filters' => true
+                        );
+                        $posts = get_posts( $args );
+                        foreach($posts as $post){ setup_postdata($post); ?>
+                            <li class="news-block__item">
+                                <div class="news-block__pic-wrapper">
+                                    <img class="news-block__pic" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title();?>">
                                 </div>
-                            </div>
-                        </li>
-                        <li class="news-block__item">
-                            <div class="news-block__pic-wrapper">
-                                <img class="news-block__pic" src="/wp-content/themes/onrial/images/news/1.jpg" alt="">
-                            </div>
-                            <div class="news-block__info-wrapper">
-                                <a class="news-block__item-title" href="">Продажа новогодних ёлок</a>
-                                <div class="news-block__item-txt">Совсем скоро всех нас закружит Новогодняя кутерьма. Все мы, как в детстве, ждём волшебства. До Нового года осталось совсем немного, а Вы ещё не задумывались о проведении праздника?</div>
-                                <div class="news-block__item-footer">
-                                    <span class="news-block__item-date-wrapper">
-                                        <i class="news-block__item-date-icon"></i>
-                                        <span class="news-block__item-date-txt">29.12.2017</span>
-                                    </span>
-                                    <a class="news-block__item-btn" href="">Читать полностью</a>
+                                <div class="news-block__info-wrapper">
+                                    <a class="news-block__item-title" href="<?php the_permalink();?>"><?php the_title();?></a>
+                                    <div class="news-block__item-txt"><?php the_excerpt();?></div>
+                                    <div class="news-block__item-footer">
+                                        <span class="news-block__item-date-wrapper">
+                                            <i class="news-block__item-date-icon"></i>
+                                            <span class="news-block__item-date-txt"><?php the_date('d m Y');?></span>
+                                        </span>
+                                        <a class="news-block__item-btn" href="<?php the_permalink();?>">Читать полностью</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="news-block__item">
-                            <div class="news-block__pic-wrapper">
-                                <img class="news-block__pic" src="/wp-content/themes/onrial/images/news/1.jpg" alt="">
-                            </div>
-                            <div class="news-block__info-wrapper">
-                                <a class="news-block__item-title" href="">Продажа новогодних ёлок</a>
-                                <div class="news-block__item-txt">Совсем скоро всех нас закружит Новогодняя кутерьма. Все мы, как в детстве, ждём волшебства. До Нового года осталось совсем немного, а Вы ещё не задумывались о проведении праздника?</div>
-                                <div class="news-block__item-footer">
-                                    <span class="news-block__item-date-wrapper">
-                                        <i class="news-block__item-date-icon"></i>
-                                        <span class="news-block__item-date-txt">29.12.2017</span>
-                                    </span>
-                                    <a class="news-block__item-btn" href="">Читать полностью</a>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        <?php } ?>
+                        <?php wp_reset_postdata(); ?>
                     </ul>
-                    <a class="news-block__more" href="">Все новости</a>
+                    <a class="news-block__more" href="/news/">Все новости</a>
                 </div>
             </div>
         </div>
