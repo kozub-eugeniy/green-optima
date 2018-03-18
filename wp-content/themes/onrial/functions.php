@@ -438,3 +438,23 @@ function filter_function_name_9265( $output, $attr ){
 
 	return $out;
 }
+/*
+ * Для страницы категории товаров, кастомные ссылки и цена
+ * */
+function wc__before_shop_loop_item(){
+    echo '<a href="' . esc_url( get_the_permalink() ) . '" class="catalog-item__title">';
+}
+add_action( 'wc__before_shop_loop_item', 'wc__before_shop_loop_item' );
+function wc__after_shop_loop_item() {
+    echo '</a>';
+}
+add_action( 'wc__after_shop_loop_item', 'wc__after_shop_loop_item' );
+function wс__template_loop_product_title() {
+    echo get_the_title();
+}
+add_action( 'wc__template_product_title', 'wс__template_loop_product_title' );
+function wc__link_without_cart(){
+    echo '<a href="' . esc_url( get_the_permalink() ) . '" class="catalog-item__btn">Подробнее</a>';
+}
+add_action( 'wc__without_add_cart_link', 'wc__link_without_cart');
+add_action( 'wc__after_shop_loop_item_price', 'woocommerce_template_loop_price', 10 );

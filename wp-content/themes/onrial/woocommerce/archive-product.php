@@ -20,41 +20,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); ?>
+get_header(); ?>
 
-	<?php
-		/**
-		 * woocommerce_before_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 * @hooked WC_Structured_Data::generate_website_data() - 30
-		 */
-		do_action( 'woocommerce_before_main_content' );
-	?>
+<div class="catalog-banner">
+    <div class="container">
+        <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+        <span class="catalog-title"><?php woocommerce_page_title(); ?></span>
+        <?php endif; ?>
+    </div>
+</div>
+<?php
+/**
+ * woocommerce_before_main_content hook.
+ *
+ * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+ * @hooked woocommerce_breadcrumb - 20
+ * @hooked WC_Structured_Data::generate_website_data() - 30
+ */
+do_action( 'woocommerce_before_main_content' );
+?>
+<div class="main-catalog">
+    <div class="container">
+        <aside class="col-md-3"></aside>
+        <div class="catalog col-md-9">
 
-    <header class="woocommerce-products-header">
-
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-
-			<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?> nhfnf</h1>
-
-		<?php endif; ?>
-
-		<?php
-			/**
-			 * woocommerce_archive_description hook.
-			 *
-			 * @hooked woocommerce_taxonomy_archive_description - 10
-			 * @hooked woocommerce_product_archive_description - 10
-			 */
-			do_action( 'woocommerce_archive_description' );
-		?>
-
-    </header>
-<div class="row">
 		<?php if ( have_posts() ) : ?>
-<!-- <div class="col-md-2 col-sm-3 hidden">
 			<?php
 				/**
 				 * woocommerce_before_shop_loop hook.
@@ -63,16 +53,14 @@ get_header( 'shop' ); ?>
 				 * @hooked woocommerce_result_count - 20
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
-				//do_action( 'woocommerce_before_shop_loop' );
+				do_action( 'woocommerce_before_shop_loop' );
 			?>
 
             <?php
             //if ( function_exists('dynamic_sidebar') )
                 //dynamic_sidebar('products-sidebar');
             ?>
-</div> -->
-<!-- <div class="col-md-10 col-sm-9"> -->
-<div class="col-xs-12">
+
 			<?php woocommerce_product_loop_start(); ?>
 
 				<?php woocommerce_product_subcategories(); ?>
@@ -93,7 +81,7 @@ get_header( 'shop' ); ?>
 				<?php endwhile; // end of the loop. ?>
 
 			<?php woocommerce_product_loop_end(); ?>
-</div>
+
 			<?php
 				/**
 				 * woocommerce_after_shop_loop hook.
@@ -131,8 +119,11 @@ get_header( 'shop' ); ?>
 		 *
 		 * @hooked woocommerce_get_sidebar - 10
 		 */
-//		do_action( 'woocommerce_sidebar' );
+		do_action( 'woocommerce_sidebar' );
 	?>
 
+
+        </div>
+    </div>
 </div>
-<?php get_footer( 'shop' ); ?>
+<?php get_footer(); ?>

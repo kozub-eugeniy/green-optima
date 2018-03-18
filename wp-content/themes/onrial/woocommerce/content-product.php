@@ -27,46 +27,31 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php post_class(); ?>>
-	<?php
-	/**
-	 * woocommerce_before_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_open - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item' );
-
-    /**
-     * woocommerce_shop_loop_item_title hook.
-     *
-     * @hooked woocommerce_template_loop_product_title - 10
-     */
-    do_action( 'woocommerce_shop_loop_item_title' );
-
-	/**
-	 * woocommerce_before_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_show_product_loop_sale_flash - 10
-	 * @hooked woocommerce_template_loop_product_thumbnail - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item_title' );
-
+<div class="col-md-4 col-xs-6">
+    <div class="catalog-item">
+        <div class="catalog-item__pic-wrapper">
+            <span class="catalog-label"></span>
+           <?php /**
+            * woocommerce_before_shop_loop_item_title hook.
+            *
+            * @hooked woocommerce_show_product_loop_sale_flash - 10
+            * @hooked woocommerce_template_loop_product_thumbnail - 10
+            */
+           do_action( 'woocommerce_before_shop_loop_item_title' );?>
+        </div>
+        <div class="catalog-item__info-wrapper">
+            <?php
+            do_action( 'wc__before_shop_loop_item');
+            do_action( 'wc__template_product_title');
+            do_action( 'wc__after_shop_loop_item');
+            do_action( 'wc__after_shop_loop_item_price');
+            do_action( 'wc__without_add_cart_link');
+            ?>
+        </div>
+    <?php
 
 
-	/**
-	 * woocommerce_after_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_rating - 5
-	 * @hooked woocommerce_template_loop_price - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item_title' );
 
-	/**
-	 * woocommerce_after_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_close - 5
-	 * @hooked woocommerce_template_loop_add_to_cart - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
-</li>
+</div>
+</div>
