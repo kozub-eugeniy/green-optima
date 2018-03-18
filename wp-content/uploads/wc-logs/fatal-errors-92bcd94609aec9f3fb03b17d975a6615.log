@@ -1,0 +1,156 @@
+2017-11-11T18:25:43+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T18:25:47+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T18:28:22+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T18:28:24+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T18:28:31+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T18:29:08+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T18:31:22+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T19:26:10+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T19:27:26+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T19:32:45+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T19:36:53+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T19:37:49+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T19:43:52+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-11T19:47:22+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-12T08:23:41+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-12T08:28:17+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-12T08:42:22+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-12T08:44:03+00:00 CRITICAL Uncaught exception 'WC_Data_Exception' with message 'Неверный адрес эл. почты для выставления счета' in /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:745
+Stack trace:
+#0 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/class-wc-order.php(1003): WC_Data->error('order_invalid_b...', '\xD0\x9D\xD0\xB5\xD0\xB2\xD0\xB5\xD1\x80\xD0\xBD\xD1\x8B\xD0...')
+#1 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php(337): WC_Order->set_billing_email('\xD0\x9D\xD0\xB5 \xD1\x83\xD0\xBA\xD0\xB0\xD0\xB7\xD0\xB0...')
+#2 /home/imsconte/imsmedia.in.ua/onrial/wp-content/plugins/buy-one-click-woocommerce/inc/javascript-class.php(94): WC_Abstract_Legacy_Order->set_address(Array, 'billing')
+#3 [internal function]: BuyJavaScript->ajaxBuyButtonForm('')
+#4 /home/imsconte/imsmedia.in.ua/onrial/wp-includes/class-wp-hook.php(298): call_user_func_array(Arr
+
+2017-11-12T08:45:09+00:00 CRITICAL Call to undefined method WC_Product::get_post()
+
+2017-11-29T08:15:49+00:00 CRITICAL Call to undefined function title()
+
+2017-11-30T09:22:39+00:00 CRITICAL Call to undefined function float()
+
+2017-11-30T09:23:24+00:00 CRITICAL Call to undefined function float()
+
+2017-11-30T09:23:45+00:00 CRITICAL Call to undefined function float()
+
+2017-12-12T09:19:09+00:00 CRITICAL Call to undefined function kama_thumb_src()
+

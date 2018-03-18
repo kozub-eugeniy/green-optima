@@ -1,0 +1,51 @@
+*::-webkit-input-placeholder
+	color: #7d7d7d
+	opacity: 1
+
+*:-moz-placeholder
+	color: #7d7d7d
+	opacity: 1
+
+*::-moz-placeholder
+	color: #7d7d7d
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #7d7d7d
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	min-height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.2
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: #000
+
+a, input, button, textarea
+	text-decoration: none
+	&:hover,
+	&:focus
+		text-decoration: none
+		outline: none
+
+h1, h2, h3, h4, h5
+	margin: 0
+	padding: 0
+	font-weight: normal
+
+i
+	font-family: "icons"
+	font-style: normal
