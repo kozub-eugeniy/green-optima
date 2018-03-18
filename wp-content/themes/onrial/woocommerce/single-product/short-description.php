@@ -27,6 +27,10 @@ if ( ! $post->post_excerpt ) {
 }
 
 ?>
-<div class="woocommerce-product-details__short-description">
-    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+<div class="product-descr__wrapper">
+    <span class="product-descr__title">Описание:</span>
+    <article class="product-descr">
+        <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+    </article>
+    <a href="#product-tabs" class="product-descr__more">Подробнее</a>
 </div>

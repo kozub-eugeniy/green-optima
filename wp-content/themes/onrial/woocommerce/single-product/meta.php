@@ -22,20 +22,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 ?>
-<div class="product_meta clearfix">
+<div class="product-id">
 
-	<div class="product-characteristics_left">Код товара: <strong><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></strong></div>
-
+	<strong>Код товара: </strong><span><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span>
+</div>
 	<?php
 		$availability = $product->get_availability();
 		if(isset($availability['class']) && $availability['class'] == 'in-stock'){ ?>
-			<div class="product-characteristics_right"><span class="accent"><i>&#xE805;</i></span> Есть в наличии</div>
+            <div class="product-availibility">
+                <i class="product-availibility__icon"></i>
+                <span class="product-availibility__txt">Есть в наличии</span>
+            </div>
 		<?php }else{ ?>
-			<div class="product-characteristics_right"><span class="accent"></span> Нет в наличии</div>
+			<div class="product-characteristics_right"><span class="accent"></span>Нет в наличии</div>
 		<?php }
 		//echo wc_get_stock_html( $product );
 	?>
-
+<div>
 	<?php if(0){ ?>
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 

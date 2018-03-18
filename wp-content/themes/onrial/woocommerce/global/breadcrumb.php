@@ -17,31 +17,36 @@
  * @see         woocommerce_breadcrumb()
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')){
 	exit;
 }
 
-if ( ! empty( $breadcrumb ) ) {
+if (!empty($breadcrumb)) {
 
-	echo $wrap_before;
+	echo "<div class='container'><nav class='breadrumbs'><ul class='breadrumbs-list'>";
 
-	foreach ( $breadcrumb as $key => $crumb ) {
+	foreach($breadcrumb as $key => $crumb) {
 
 		echo $before;
 
-		if ( ! empty( $crumb[1] ) && sizeof( $breadcrumb ) !== $key + 1 ) {
-			echo '<li><a href="' . esc_url( $crumb[1] ) . '">' . esc_html( $crumb[0] ) . '</a></li>';
+		if (!empty($crumb[1]) && sizeof($breadcrumb) !== $key + 1) {
+		    if($key == 0){
+                echo '<li class="breadrumbs-item home-item"><a href="' . esc_url($crumb[1]).'">' . esc_html($crumb[0]) . '</a><i>></i></li>';
+            } else {
+                echo '<li class="breadrumbs-item"><a href="' . esc_url($crumb[1]).'">' . esc_html($crumb[0]) . '</a><i>></i></li>';
+            }
+
 		} else {
-			echo '<li>'.esc_html( $crumb[0] ).'</li>';
+			echo '<li class="breadrumbs-item">'.esc_html($crumb[0]).'</li>';
 		}
 
 		echo $after;
 
-		if ( sizeof( $breadcrumb ) !== $key + 1 ) {
+		if (sizeof( $breadcrumb ) !== $key + 1) {
 			echo $delimiter;
 		}
 	}
 
-	echo $wrap_after;
+	echo "</ul></nav></div>";
 
 }

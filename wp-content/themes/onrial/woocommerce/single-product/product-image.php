@@ -33,9 +33,9 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="row">
-    <div class="col-md-6">
-        <div class="product-photo">
+<!--<div class="row">-->
+<!--    <div class="col-md-6">-->
+        <div class="product-slider__wrapper">
 			<?php
 				$attributes = array(
 					'title'                   => get_post_field( 'post_title', $post_thumbnail_id ),
@@ -49,14 +49,14 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 				$attachment_ids = $product->get_gallery_image_ids();
 
 				if ( $attachment_ids ) { ?>
-					<div class="product-slider">
-						<?php do_action( 'woocommerce_product_thumbnails' ); ?>
-					</div>
-					<div class="product-slider-nav-wrap">
-						<div class="product-slider-nav">
+					<div class="product-nav">
+<!--						<div class="product-nav__item">-->
 							<?php do_action( 'woocommerce_product_thumbnails' ); ?>
-						</div>
+<!--						</div>-->
 					</div>
+                    <div class="product-slider">
+                        <?php do_action( 'woocommerce_product_thumbnails' ); ?>
+                    </div>
 				<?php } elseif( has_post_thumbnail() ) {
 					$html  = '<div data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'shop_thumbnail' ) . '" class="woocommerce-product-gallery__image"><a href="' . esc_url( $full_size_image[0] ) . '">';
 					$html .= get_the_post_thumbnail( $post->ID, 'shop_single', $attributes );
@@ -65,6 +65,6 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 				}
 			?>
         </div>
-    </div>
+<!--    </div>-->
 
 
