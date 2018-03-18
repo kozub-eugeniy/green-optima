@@ -174,7 +174,13 @@
             <div class="main-header__container">
                 <div class="col-md-6 main-header__left">
                     <div class="logo-wrapper">
-                        <img class="header-logo" src="/wp-content/themes/onrial/assets/static/png/logo_10a97e11343ce178daa76bec437cd652.png" alt="">
+                        <?php if (is_front_page()){ ?>
+                            <img class="header-logo" src="/wp-content/themes/onrial/assets/static/png/logo_10a97e11343ce178daa76bec437cd652.png" alt="">
+                        <?php } else {?>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                <img class="header-logo" src="/wp-content/themes/onrial/assets/static/png/logo_10a97e11343ce178daa76bec437cd652.png" alt="">
+                            </a>
+                        <?php }?>
                         <span class="logo-descr">Ландшафтный дизайн</span>
                     </div>
                     <div class="land-header__block">
