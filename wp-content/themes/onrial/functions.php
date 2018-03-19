@@ -31,7 +31,7 @@ add_filter( 'get_search_form', 'search_form_modify' );
 
 add_filter('woocommerce_sale_flash', 'my_custom_sale_flash', 10, 3);
 function my_custom_sale_flash($text, $post, $_product) {
-    return '<span class="onsale">Акция</span>';}
+    return '<span class="catalog-label" style="display: block"></span>';}
 	
 add_theme_support('widgets');
 
@@ -254,7 +254,6 @@ class Sublevel_Walker extends Walker_Nav_Menu {
         $output .= "</div></li>\n";
     }
 }
-
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 /* API Maps */

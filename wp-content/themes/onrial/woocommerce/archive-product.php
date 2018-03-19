@@ -41,7 +41,15 @@ do_action( 'woocommerce_before_main_content' );
 ?>
 <div class="main-catalog">
     <div class="container">
-        <aside class="col-md-3"></aside>
+        <aside class="col-md-3">
+            <div class="sidebar-inner row">
+                <span class="sidebar-title">Фильтр по категории</span>
+                <?php
+                    if ( function_exists('dynamic_sidebar') )
+                        dynamic_sidebar('products-sidebar');
+                ?>
+            </div>
+        </aside>
         <div class="catalog col-md-9">
 
 		<?php if ( have_posts() ) : ?>
@@ -56,10 +64,7 @@ do_action( 'woocommerce_before_main_content' );
 				do_action( 'woocommerce_before_shop_loop' );
 			?>
 
-            <?php
-            //if ( function_exists('dynamic_sidebar') )
-                //dynamic_sidebar('products-sidebar');
-            ?>
+
 
 			<?php woocommerce_product_loop_start(); ?>
 

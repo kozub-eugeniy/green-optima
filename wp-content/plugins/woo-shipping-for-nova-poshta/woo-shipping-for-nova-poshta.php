@@ -166,7 +166,9 @@ class NovaPoshta extends Base
     {
         global $wp_scripts;
         $jquery_version = isset($wp_scripts->registered['jquery-ui-core']->ver) ? $wp_scripts->registered['jquery-ui-core']->ver : '1.9.2';
-        wp_register_style('jquery-ui-style', '//code.jquery.com/ui/' . $jquery_version . '/themes/smoothness/jquery-ui.css', array(), $jquery_version);
+        if( !is_product_category() ) {
+            wp_register_style('jquery-ui-style', '//code.jquery.com/ui/' . $jquery_version . '/themes/smoothness/jquery-ui.css', array(), $jquery_version);
+        }
         wp_enqueue_style('jquery-ui-style');
     }
 

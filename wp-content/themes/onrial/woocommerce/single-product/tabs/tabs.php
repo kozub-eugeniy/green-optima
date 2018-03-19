@@ -41,9 +41,11 @@ if ( ! empty( $tabs ) ) : ?>
              endforeach; ?>
 		</ul>
 		<?php foreach ( $tabs as $key => $tab ) :?>
+            <?php if($key != 'additional_information'){ ?>
 			<div class="product-tabs__content <?php if($tab['callback'] == 'woocommerce_product_description_tab') echo 'active';?>">
 				<?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
 			</div>
+            <?php } ?>
 		<?php endforeach; ?>
 	</nav>
 

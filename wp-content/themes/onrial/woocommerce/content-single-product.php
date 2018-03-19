@@ -66,9 +66,29 @@ global $product;
                  */
                     do_action( 'woocommerce_single_product_summary' );
                 ?>
-                <?php do_action( 'woocommerce_product_additional_information', $product ); ?>
+                <?php //do_action( 'woocommerce_product_additional_information', $product ); ?>
                 <?php woocommerce_template_single_add_to_cart(); ?>
                 <?php add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 ); ?>
+                <div class="product-adv__wrapper">
+                    <ul class="product-adv__list">
+                        <li class="product-adv__item">
+                            <i class="product-adv__icon ai1"></i>
+                                <span class="product-adv__txt"><strong>Доставка по Украине</strong> <br>
+                                За 1-2 дня <br>
+                                или <strong>Самовывоз</strong></span>
+                        </li>
+                        <li class="product-adv__item">
+                            <i class="product-adv__icon ai2"></i>
+                                <span class="product-adv__txt"><strong>Оплата</strong> <br>
+                                Наличными, оплата картой, банковский перевод</span>
+                        </li>
+                        <li class="product-adv__item">
+                            <i class="product-adv__icon ai3"></i>
+                                <span class="product-adv__txt"><strong>Обмен/возврат</strong> <br>
+                                14 дней</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="clearfix"></div>
