@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <meta property="og:image" content="path/to/image.jpg">
-    <link rel="shortcut icon" href="/wp-content/themes/onrial/img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/img/favicon.png" type="image/png">
     <!--    <link rel="stylesheet" href="/css/main.min.css">-->
 
     <!-- Chrome, Firefox OS and Opera -->
@@ -28,121 +28,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<!--
-<header class="header">
-    <div class="top-line">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8">
-                    <?php //wp_nav_menu(array(
-                        //'menu' => 'headMenu',
-                        //'menu_class' => 'top-mnu',
-                    //)); ?>
-
-                <div class="col-sm-2 col-right">
-                    <a href="/checkout/" class="cart-btn">
-                        <img src="<?php //echo get_template_directory_uri(); ?>/img/ico-cart.png" alt="" class="">
-                        <span class="cart-btn__amount"><?php //echo WC()->cart->get_cart_contents_count(); ?></span>
-                        <span class="cart-btn__price"><?php //echo WC()->cart->get_cart_subtotal(); ?></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="logo-line">
-            <div class="row">
-                <div class="col-xs-7 col-sm-6">
-                    <a href="/" class="logo">
-                        <img src="<?php //echo get_template_directory_uri(); ?>/img/logo.png" alt="">
-                    </a>
-                    <span class="main-descr">Производство качественных безопасных материалов для наращивания ресниц</span>
-                </div>
-                <div class="col-xs-5 col-right col-sm-6">
-                    <a href="javascript:void(0)" data-mfp-src="#consult-popup" class="btn header-popup popup-btn">Обратный
-                        звонок</a>
-                    <ul class="header-phones">
-                        <li>+38 (‎‎096) 600 01 55</li>
-                        <li><img src="<?php //echo get_template_directory_uri(); ?>/img/viber_logo.png">+38 (050) 600 01 55</li>
-                        <li>+38 (073) 600 01 55</li>
-                    </ul>
-                </div>
-				<ul class="footer-social">
-					<li><a href="https://www.facebook.com/lashonrial/" target="blank" class="footer-social__link"><i>&#xf09a</i></a></li>
-					<li><a href="https://www.instagram.com/onrial/" target="blank" class="footer-social__link"><i>&#xF16D</i></a></li>
-				</ul>
-            </div>
-        </div>
-        <nav class="mnu-wrap clearfix">
-            <?php// wp_nav_menu(array(
-                //'menu' => 'mainMenu',
-                //'menu_class' => 'main-mnu',
-           // )); ?>
-            <div class="search-form">
-                <?php //echo do_shortcode('[yith_woocommerce_ajax_search]'); ?> 
-            </div>
-			
-        </nav>
-
-    </div>
-</header>
-<div id="fixed_menu">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<nav>
-					<img src="<?php //echo get_template_directory_uri(); ?>/img/logo.png" alt="" class="logo">
-					<?php// wp_nav_menu(array(
-                       // 'menu' => 'fixedMenu',
-                       // 'menu_class' => 'top-mnu hidden-sm',
-                   // )); ?>
-					<div id="fixed_submenu">
-						<label for="fixed_submenu_trigger">
-							<span class="hidden-xs hidden-sm">Еще</span>
-							<img src="<?php //echo get_template_directory_uri(); ?>/img/menu.png" alt="" class="">
-							<span class="visible-sm">Меню</span>
-						</label>
-						<input type="checkbox" class="hidden" id="fixed_submenu_trigger" name="fixed_submenu_trigger">
-						<div>
-							<div class="left">
-								<?php// wp_nav_menu(array(
-									//'menu' => 'fixedMenu',
-									//'menu_class' => 'top-mnu visible-xs visible-sm',
-							//)); ?>
-								<?php //wp_nav_menu(array(
-								//	'menu' => 'fixedSubmenu'
-								//)); ?>
-							</div>
-							<div class="right">
-								<ul class="header-phones">
-									<li>+38 (‎‎096) 600 01 55</li>
-									<li>+38 (050) 600 01 55</li>
-									<li>+38 (073) 600 01 55</li>
-								</ul>
-								<ul class="footer-social" style="width: 100%;">
-									<li><a href="https://www.facebook.com/lashonrial/" target="blank" class="footer-social__link"><i>&#xf09a</i></a></li>
-									<li><a href="https://www.instagram.com/onrial/" target="blank" class="footer-social__link"><i>&#xF16D</i></a></li>
-								</ul>
-								<a href="javascript:void(0)" data-mfp-src="#consult-popup" class="btn header-popup popup-btn">Обратный звонок</a>
-							</div>
-						</div>
-					</div>
-					<a href="http://onrial.imsmedia.in.ua/account/edit-account/"><img src="<?php //echo get_template_directory_uri(); ?>/img/users.png" alt="" class="profile"></a>
-					<div class="search-form">
-						<?php //echo do_shortcode('[yith_woocommerce_ajax_search]'); ?> 
-					</div>
-					<a href="/checkout/" class="cart-btn">
-                        <img src="<?php// echo get_template_directory_uri(); ?>/img/ico-cart.png" alt="" class="">
-                        <span class="cart-btn__amount"><?php //echo WC()->cart->get_cart_contents_count(); ?></span>
-                        <span class="cart-btn__price"><?php// echo WC()->cart->get_cart_subtotal(); ?></span>
-                    </a>
-				</nav>
-			</div>
-		</div>
-	</div>
-	<div id="toHeader" onclick="jQuery('html, body').animate({scrollTop: 0}, 800)"><img src="<?php// echo get_template_directory_uri(); ?>/img/download.png">Вверх</div>
-</div>
--->
 <header class="header">
     <div class="main-header">
         <div class="container">
@@ -150,10 +35,10 @@
                 <div class="col-md-6 main-header__left">
                     <div class="logo-wrapper">
                         <?php if (is_front_page()){ ?>
-                            <img class="header-logo" src="/wp-content/themes/onrial/assets/static/png/logo_10a97e11343ce178daa76bec437cd652.png" alt="">
+                            <img class="header-logo" src="<?php echo get_template_directory_uri();?>/assets/static/png/logo_10a97e11343ce178daa76bec437cd652.png" alt="">
                         <?php } else {?>
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                <img class="header-logo" src="/wp-content/themes/onrial/assets/static/png/logo_10a97e11343ce178daa76bec437cd652.png" alt="">
+                                <img class="header-logo" src="<?php echo get_template_directory_uri();?>/assets/static/png/logo_10a97e11343ce178daa76bec437cd652.png" alt="">
                             </a>
                         <?php }?>
                         <span class="logo-descr">Питомник растений</span>
@@ -168,6 +53,7 @@
                                 Например, <span class="search-example">туя западная, лиственница</span>
                             </div>
                         </form>
+                        <?php// echo do_shortcode('[yith_woocommerce_ajax_search]'); ?>
                     </div>                 
                 </div>
                 <div class="col-md-6 main-header__right">

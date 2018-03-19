@@ -50,38 +50,38 @@ get_header('landscape'); ?>
         <section class="service-wrapper">
             <div class="container">
                 <div class="land-title-wrapper">
-                    <img class="land-title-pic" src="/wp-content/themes/onrial/images/landing/service-icon.png" alt="">
+                    <img class="land-title-pic" src="<?php echo get_template_directory_uri();?>/images/landing/service-icon.png" alt="">
                     <span class="land-title">Наши услуги</span>
                 </div>
                 <div class="col-xs-12 services">
                     <div class="service-item col-sm-6">
                         <div class="service-item__inner lg">
                             <span class="service-item__title">Ландшафтный дизайн</span>
-                            <img class="service-item__pic" src="/wp-content/themes/onrial/images/landing/s1.jpg" alt="">
+                            <img class="service-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/s1.jpg" alt="">
                         </div>
                     </div>
                     <div class="service-item col-sm-6">
                         <div class="service-item__inner lg">
                             <span class="service-item__title">Благоустройство территории</span>
-                            <img class="service-item__pic" src="/wp-content/themes/onrial/images/landing/s2.jpg" alt="">
+                            <img class="service-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/s2.jpg" alt="">
                         </div>
                     </div>
                     <div class="service-item col-md-4 col-sm-6">
                         <div class="service-item__inner sm">
                             <span class="service-item__title sm">Инженерные системы</span>
-                            <img class="service-item__pic" src="/wp-content/themes/onrial/images/landing/s3.jpg" alt="">
+                            <img class="service-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/s3.jpg" alt="">
                         </div>
                     </div>
                     <div class="service-item col-md-4 col-sm-6">
                         <div class="service-item__inner sm">
                             <span class="service-item__title sm">Озеленение</span>
-                            <img class="service-item__pic" src="/wp-content/themes/onrial/images/landing/s4.jpg" alt="">
+                            <img class="service-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/s4.jpg" alt="">
                         </div>
                     </div>
                     <div class="service-item col-md-4 col-sm-6">
                         <div class="service-item__inner sm">
                             <span class="service-item__title sm">Уход за участком</span>
-                            <img class="service-item__pic" src="/wp-content/themes/onrial/images/landing/s5.jpg" alt="">
+                            <img class="service-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/s5.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -90,90 +90,90 @@ get_header('landscape'); ?>
         <section class="projects-wrapper">
             <div class="container">
                 <div class="land-title-wrapper">
-                    <img class="land-title-pic" src="/wp-content/themes/onrial/images/landing/about-icon.png" alt="">
+                    <img class="land-title-pic" src="<?php echo get_template_directory_uri();?>/images/landing/about-icon.png" alt="">
                     <span class="land-title">Наши проекты</span>
                 </div>
             </div>
             <ul class="land-cat-items">
                 <li class="land-cat-item">
-                    <a href="/wp-content/themes/onrial/assets/static/jpg/p1_6e1e7cc1b3c0603d5b99797dc3e4adae.jpg" class="land-cat-item__inner image-popup-vertical-fit">
+                    <a href="<?php echo get_template_directory_uri();?>/assets/static/jpg/p1_6c8e3c031d7fea88a2355aee9f7c8e41.jpg" class="land-cat-item__inner image-popup-vertical-fit">
                         <div class="land-green-overlay"></div>
                         <div class="land-blue-overlay"></div>
                         <div class="land-cat-item__zoom">
                             <i class="land-cat-item__zoom-icon"></i>
                             <span class="land-cat-item__zoom-txt">Смотреть</span>
                         </div>
-                        <img class="land-cat-item__pic" src="/wp-content/themes/onrial/images/landing/p1.jpg" alt="">
+                        <img class="land-cat-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/p1.jpg" alt="">
                         <div class="land-cat-item__title">
                             <span>Кочеток</span>
                         </div>
                     </a>
                 </li>
                 <li class="land-cat-item">
-                    <a href="/wp-content/themes/onrial/assets/static/jpg/p1_6e1e7cc1b3c0603d5b99797dc3e4adae.jpg" class="land-cat-item__inner image-popup-vertical-fit">
+                    <a href="<?php echo get_template_directory_uri();?>/assets/static/jpg/p2_e9146a48fe05e05bd4d92d941eec93d9.jpg" class="land-cat-item__inner image-popup-vertical-fit">
                         <div class="land-green-overlay"></div>
                         <div class="land-blue-overlay"></div>
                         <div class="land-cat-item__zoom">
                             <i class="land-cat-item__zoom-icon"></i>
                             <span class="land-cat-item__zoom-txt">Смотреть</span>
                         </div>
-                        <img class="land-cat-item__pic" src="/wp-content/themes/onrial/images/landing/p2.jpg" alt="">
+                        <img class="land-cat-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/p2.jpg" alt="">
                         <div class="land-cat-item__title">
                             <span>Традиция</span>
                         </div>
                     </a>
                 </li>
                 <li class="land-cat-item">
-                    <a href="/wp-content/themes/onrial/assets/static/jpg/p1_6e1e7cc1b3c0603d5b99797dc3e4adae.jpg" class="land-cat-item__inner image-popup-vertical-fit">
+                    <a href="<?php echo get_template_directory_uri();?>/assets/static/jpg/p3_026c475077e35a4ae2e87f85dc010f51.jpg" class="land-cat-item__inner image-popup-vertical-fit">
                         <div class="land-green-overlay"></div>
                         <div class="land-blue-overlay"></div>
                         <div class="land-cat-item__zoom">
                             <i class="land-cat-item__zoom-icon"></i>
                             <span class="land-cat-item__zoom-txt">Смотреть</span>
                         </div>
-                        <img class="land-cat-item__pic" src="/wp-content/themes/onrial/images/landing/p3.jpg" alt="">
+                        <img class="land-cat-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/p3.jpg" alt="">
                         <div class="land-cat-item__title">
                             <span>Лесное</span>
                         </div>
                     </a>
                 </li>
                 <li class="land-cat-item">
-                    <a href="/wp-content/themes/onrial/assets/static/jpg/p1_6e1e7cc1b3c0603d5b99797dc3e4adae.jpg" class="land-cat-item__inner image-popup-vertical-fit">
+                    <a href="<?php echo get_template_directory_uri();?>/assets/static/jpg/p4_949399ce84ac9e2eb53977ef89c151a3.jpg" class="land-cat-item__inner image-popup-vertical-fit">
                         <div class="land-green-overlay"></div>
                         <div class="land-blue-overlay"></div>
                         <div class="land-cat-item__zoom">
                             <i class="land-cat-item__zoom-icon"></i>
                             <span class="land-cat-item__zoom-txt">Смотреть</span>
                         </div>
-                        <img class="land-cat-item__pic" src="/wp-content/themes/onrial/images/landing/p4.jpg" alt="">
+                        <img class="land-cat-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/p4.jpg" alt="">
                         <div class="land-cat-item__title">
                             <span>Флоринка</span>
                         </div>
                     </a>
                 </li>
                 <li class="land-cat-item">
-                    <a href="/wp-content/themes/onrial/assets/static/jpg/p1_6e1e7cc1b3c0603d5b99797dc3e4adae.jpg" class="land-cat-item__inner image-popup-vertical-fit">
+                    <a href="<?php echo get_template_directory_uri();?>/assets/static/jpg/p5_cc03adeb247ea5f8a2613b290c864997.jpg" class="land-cat-item__inner image-popup-vertical-fit">
                         <div class="land-green-overlay"></div>
                         <div class="land-blue-overlay"></div>
                         <div class="land-cat-item__zoom">
                             <i class="land-cat-item__zoom-icon"></i>
                             <span class="land-cat-item__zoom-txt">Смотреть</span>
                         </div>
-                        <img class="land-cat-item__pic" src="/wp-content/themes/onrial/images/landing/p5.jpg" alt="">
+                        <img class="land-cat-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/p5.jpg" alt="">
                         <div class="land-cat-item__title">
                             <span>Люботин</span>
                         </div>
                     </a>
                 </li>
                 <li class="land-cat-item">
-                    <a href="/wp-content/themes/onrial/assets/static/jpg/p1_6e1e7cc1b3c0603d5b99797dc3e4adae.jpg" class="land-cat-item__inner image-popup-vertical-fit">
+                    <a href="<?php echo get_template_directory_uri();?>/assets/static/jpg/p6_1caf4505ff9059650b9851b72a9c415f.jpg" class="land-cat-item__inner image-popup-vertical-fit">
                         <div class="land-green-overlay"></div>
                         <div class="land-blue-overlay"></div>
                         <div class="land-cat-item__zoom">
                             <i class="land-cat-item__zoom-icon"></i>
                             <span class="land-cat-item__zoom-txt">Смотреть</span>
                         </div>
-                        <img class="land-cat-item__pic" src="/wp-content/themes/onrial/images/landing/p6.jpg" alt="">
+                        <img class="land-cat-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/p6.jpg" alt="">
                         <div class="land-cat-item__title">
                             <span>Чугуев</span>
                         </div>
@@ -184,12 +184,12 @@ get_header('landscape'); ?>
         <section class="stages-wrapper">
             <div class="container">
                 <div class="land-title-wrapper">
-                    <img class="land-title-pic" src="/wp-content/themes/onrial/images/landing/stages-icon.png" alt="">
+                    <img class="land-title-pic" src="<?php echo get_template_directory_uri();?>/images/landing/stages-icon.png" alt="">
                     <span class="land-title">Как мы выполняем работу</span>
                 </div>
                 <ul class="stages-list">
                     <li class="stages-item">
-                        <img class="stages-item__pic" src="/wp-content/themes/onrial/images/landing/handshake-icon.png" alt="">
+                        <img class="stages-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/handshake-icon.png" alt="">
                         <span class="stages-item__title">Этап 1</span>
                         <div class="stages-item__descr">Просчет бюджета <br>и подготовка</div>
                         <span class="stages-item__list-title">Что конкретно:</span>
@@ -203,7 +203,7 @@ get_header('landscape'); ?>
                         </div>
                     </li>
                     <li class="stages-item">
-                        <img class="stages-item__pic" src="/wp-content/themes/onrial/images/landing/handshake-icon.png" alt="">
+                        <img class="stages-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/handshake-icon.png" alt="">
                         <span class="stages-item__title">Этап 2</span>
                         <div class="stages-item__descr">Просчет бюджета <br>и подготовка</div>
                         <span class="stages-item__list-title">Что конкретно:</span>
@@ -217,7 +217,7 @@ get_header('landscape'); ?>
                         </div>
                     </li>
                     <li class="stages-item">
-                        <img class="stages-item__pic" src="/wp-content/themes/onrial/images/landing/handshake-icon.png" alt="">
+                        <img class="stages-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/handshake-icon.png" alt="">
                         <span class="stages-item__title">Этап 3</span>
                         <div class="stages-item__descr">Просчет бюджета <br>и подготовка</div>
                         <span class="stages-item__list-title">Что конкретно:</span>
@@ -231,7 +231,7 @@ get_header('landscape'); ?>
                         </div>
                     </li>
                     <li class="stages-item">
-                        <img class="stages-item__pic" src="/wp-content/themes/onrial/images/landing/handshake-icon.png" alt="">
+                        <img class="stages-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/handshake-icon.png" alt="">
                         <span class="stages-item__title">Этап 4</span>
                         <div class="stages-item__descr">Просчет бюджета <br>и подготовка</div>
                         <span class="stages-item__list-title">Что конкретно:</span>
@@ -245,7 +245,7 @@ get_header('landscape'); ?>
                         </div>
                     </li>
                     <li class="stages-item">
-                        <img class="stages-item__pic" src="/wp-content/themes/onrial/images/landing/handshake-icon.png" alt="">
+                        <img class="stages-item__pic" src="<?php echo get_template_directory_uri();?>/images/landing/handshake-icon.png" alt="">
                         <span class="stages-item__title">Этап 5</span>
                         <div class="stages-item__descr">Просчет бюджета <br>и подготовка</div>
                         <span class="stages-item__list-title">Что конкретно:</span>
@@ -264,7 +264,7 @@ get_header('landscape'); ?>
         <section class="events-wrapper">
             <div class="container">
                 <div class="land-title-wrapper">
-                    <img class="land-title-pic" src="/wp-content/themes/onrial/images/landing/events-icon.png" alt="">
+                    <img class="land-title-pic" src="<?php echo get_template_directory_uri();?>/images/landing/events-icon.png" alt="">
                     <span class="title">События</span>
                 </div>
                 <ul class="events-list">
@@ -273,7 +273,7 @@ get_header('landscape'); ?>
                             <div class="events-item__title-wrapper">
                                 <span class="events-item__title">Название события</span>
                             </div>
-                            <img class="events-pic" src="/wp-content/themes/onrial/images/landing/e1.jpg" alt="">
+                            <img class="events-pic" src="<?php echo get_template_directory_uri();?>/images/landing/e1.jpg" alt="">
                         </a>
                     </li>
                     <li class="events-item col-sm-6">
@@ -281,7 +281,7 @@ get_header('landscape'); ?>
                             <div class="events-item__title-wrapper">
                                 <span class="events-item__title">Название события</span>
                             </div>
-                            <img class="events-pic" src="/wp-content/themes/onrial/images/landing/e2.jpg" alt="">
+                            <img class="events-pic" src="<?php echo get_template_directory_uri();?>/images/landing/e2.jpg" alt="">
                         </a>
                     </li>
                 </ul>
@@ -298,7 +298,7 @@ get_header('landscape'); ?>
                 <div class="row">
                     <div class="col-md-5">
                         <div class="title-wrapper">
-                            <img class="title-pic" src="/wp-content/themes/onrial/images/contacts-icon.png" alt="">
+                            <img class="title-pic" src="<?php echo get_template_directory_uri();?>/images/contacts-icon.png" alt="">
                             <span class="title">Контакты</span>
                         </div>
                         <div class="contacts-info">
@@ -331,7 +331,7 @@ get_header('landscape'); ?>
                                 <li class="address-item">Карта</li>
                             </ul>
                             <div class="address-content active">
-                                <img class="address-pic" src="/wp-content/themes/onrial/images/scheme.jpg" alt="">
+                                <img class="address-pic" src="<?php echo get_template_directory_uri();?>/images/scheme.jpg" alt="">
                             </div>
                             <div class="address-content">
                                 <div id="map"></div>
