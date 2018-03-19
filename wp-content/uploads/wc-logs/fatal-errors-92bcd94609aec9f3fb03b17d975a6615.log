@@ -154,3 +154,7 @@ Stack trace:
 
 2017-12-12T09:19:09+00:00 CRITICAL Call to undefined function kama_thumb_src()
 
+2018-03-19T08:14:05+00:00 CRITICAL Call to undefined function get_template_directory_url()
+
+2018-03-19T08:14:11+00:00 CRITICAL Call to undefined function get_template_directory_url()
+

@@ -29,31 +29,30 @@
     }
 
 ?>
-
-<div id="checkout">
-    <div class="row">
-        <div class="col-md-7">
-            <div class="ordering-cart">
-                <div class="ordering-cart__top clearfix">
-                    <a href="javascript:void(0)" class="btn ordering-cart__continue">Продолжить покупки</a>
-                    <div class="ordering-cart__title">Ваш заказ:</div>
+<div class="main-order">
+    <div class="container">
+        <div class="col-md-7 main-order__left">
+            <div class="ordering-cart__top clearfix order-page-wrapper">
+                <div class="order-page__title-wrapper">
+                    <div class="order-page__title">Ваш заказ:</div>
+                    <a href="javascript:void(0)" class="btn ordering-cart__continue order-page__resume">Продолжить покупки</a>
                 </div>
-                <div class="ordering-scroll">
+                <div class="order-wrapper">
                     <?php
-                        $items = WC()->cart->get_cart();
-                        if (WC()->cart->is_empty()) {
-                            wc_get_template('cart/cart-empty.php');
-                        } else {
-                            wc_get_template('cart/cart.php');
-                        }
+                    $items = WC()->cart->get_cart();
+                    if (WC()->cart->is_empty()) {
+                        wc_get_template('cart/cart-empty.php');
+                    } else {
+                        wc_get_template('cart/cart.php');
+                    }
                     ?>
 
                 </div>
-                <ul class="cart-result">
-                    <li class="clearfix">
-                        <span class="cart-result__left"><?php _e('Subtotal', 'woocommerce'); ?>:</span>
-                        <span class="cart-result__right"><?php wc_cart_totals_subtotal_html(); ?></span>
-                    </li>
+                <div class="order-page__totals">
+<!--                    <li class="clearfix">-->
+<!--                        <span class="cart-result__left">--><?php //_e('Subtotal', 'woocommerce'); ?><!--:</span>-->
+<!--                        <span class="cart-result__right">--><?php //wc_cart_totals_subtotal_html(); ?><!--</span>-->
+<!--                    </li>-->
                     <?php foreach (WC()->cart->get_coupons() as $code => $coupon) : ?>
                         <li>
                             <span class="cart-result__left"><?php wc_cart_totals_coupon_label($coupon); ?>:</span>
@@ -77,7 +76,8 @@
                             <?php endforeach; ?>
                         <?php else : ?>
                             <li>
-                                <span class="cart-result__left"><?php echo esc_html(WC()->countries->tax_or_vat()); ?>:</span>
+                                <span class="cart-result__left"><?php echo esc_html(WC()->countries->tax_or_vat()); ?>
+                                    :</span>
                                 <span class="cart-result__right"><?php wc_cart_totals_taxes_total_html(); ?></span>
                             </li>
                         <?php endif; ?>
@@ -94,7 +94,8 @@
                             <?php endforeach; ?>
                         <?php else : ?>
                             <li>
-                                <span class="cart-result__left"><?php echo esc_html(WC()->countries->tax_or_vat()); ?>:</span>
+                                <span class="cart-result__left"><?php echo esc_html(WC()->countries->tax_or_vat()); ?>
+                                    :</span>
                                 <span class="cart-result__right"><?php wc_cart_totals_taxes_total_html(); ?></span>
                             </li>
                         <?php endif; ?>
@@ -102,17 +103,16 @@
 
                     <?php do_action('woocommerce_review_order_before_order_total'); ?>
 
-                    <li>
-                        <span class="cart-result__left"><?php _e('Total', 'woocommerce'); ?>:</span>
-                        <span class="cart-result__right"><?php wc_cart_totals_order_total_html(); ?></span>
-                    </li>
+
+                    <span class="order-page__totals-title"><?php _e('Total', 'woocommerce'); ?>:</span>
+                    <span class="order-page__totals-sum"><?php wc_cart_totals_order_total_html(); ?></span>
+
 
                     <?php do_action('woocommerce_review_order_after_order_total'); ?>
-                </ul>
+                </div>
             </div>
         </div>
         <div class="col-md-5">
-
             <div class="tabs">
                 <?php if (!is_user_logged_in() && $checkout->is_registration_enabled()) { ?>
                     <ul class="tabs-caption ordering-tabs-captions clearfix">
@@ -121,42 +121,44 @@
                     </ul>
                 <?php } ?>
                 <div class="tabs-content active">
-                    <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url(wc_get_checkout_url()); ?>" enctype="multipart/form-data">
+                    <form name="checkout" method="post" class="checkout woocommerce-checkout"
+                          action="<?php echo esc_url(wc_get_checkout_url()); ?>" enctype="multipart/form-data">
                         <div id="first-step">
                             <?php if (!is_user_logged_in() && $checkout->is_registration_enabled()) { ?>
                                 <div class="ordering-new__check">
-                                    <input class="filter-block__check" id="createaccount" name="createaccount" value="1" type="checkbox" hidden>
+                                    <input class="filter-block__check" id="createaccount" name="createaccount" value="1"
+                                           type="checkbox" hidden>
                                     <label for="createaccount" class="filter-block__label">Я хочу зарегистрироваться</label>
                                 </div>
                             <?php } ?>
                             <div id="customer_details" class="ordering-new-form">
                                 <div class="row">
                                     <?php
-                                        $main_fields = ['billing_first_name', 'billing_phone', 'billing_email', 'billing_city'];
-                                        $fields      = $checkout->get_checkout_fields('billing');
+                                    $main_fields = ['billing_first_name', 'billing_phone', 'billing_email', 'billing_city'];
+                                    $fields = $checkout->get_checkout_fields('billing');
 
-                                        foreach ($main_fields as $key) {
-                                            if (isset($fields[$key])) {
-                                                $field                = $fields[$key];
-                                                $field['return']      = true;
-                                                $field['class']       = [];
-                                                $field['label_class'] = ['label'];
-                                                $field['input_class'] = ['input'];
-                                                echo str_replace(
-                                                    [
-                                                        '<p',
-                                                        '</p>',
-                                                        '<abbr class="required" title="обязательно">*</abbr>',
-                                                    ],
-                                                    [
-                                                        '<div class="col-sm-6"><p',
-                                                        '</p></div>',
-                                                        '<span class="accent">*</span>',
-                                                    ],
-                                                    woocommerce_form_field($key, $field, $checkout->get_value($key)));
+                                    foreach ($main_fields as $key) {
+                                        if (isset($fields[$key])) {
+                                            $field = $fields[$key];
+                                            $field['return'] = true;
+                                            $field['class'] = [];
+                                            $field['label_class'] = ['label'];
+                                            $field['input_class'] = ['input'];
+                                            echo str_replace(
+                                                [
+                                                    '<p',
+                                                    '</p>',
+                                                    '<abbr class="required" title="обязательно">*</abbr>',
+                                                ],
+                                                [
+                                                    '<div class="col-sm-6"><p',
+                                                    '</p></div>',
+                                                    '<span class="accent">*</span>',
+                                                ],
+                                                woocommerce_form_field($key, $field, $checkout->get_value($key)));
 
-                                            }
                                         }
+                                    }
                                     ?>
                                 </div>
 
@@ -164,16 +166,23 @@
                                     <div class="row">
                                         <?php if (!is_user_logged_in() && $checkout->is_registration_enabled()) { ?>
                                             <div class="col-sm-6 password-section" id="account_password_field">
-                                                <label for="account_password" class="label">Пароль <span class="accent">*</span></label>
-                                                <input class="input" name="account_password" id="account_password" type="password">
+                                                <label for="account_password" class="label">Пароль <span
+                                                            class="accent">*</span></label>
+                                                <input class="input" name="account_password" id="account_password"
+                                                       type="password">
                                             </div>
                                             <div class="col-sm-6 password-section">
-                                                <label for="account_repassword" class="label">Повторите пароль <span class="accent">*</span></label>
-                                                <input class="input" name="account_repassword" id="account_repassword" type="password">
+                                                <label for="account_repassword" class="label">Повторите пароль <span
+                                                            class="accent">*</span></label>
+                                                <input class="input" name="account_repassword" id="account_repassword"
+                                                       type="password">
                                             </div>
                                         <?php } ?>
                                         <div class="col-sm-6 col-sm-offset-6">
-                                            <button type="button" class="btn btn--accent" onclick="jQuery('#first-step, .ordering-tabs-captions').slideUp(); jQuery('#second-step').slideDown();">Далее</button>
+                                            <button type="button" class="btn btn--accent"
+                                                    onclick="jQuery('#first-step, .ordering-tabs-captions').slideUp(); jQuery('#second-step').slideDown();">
+                                                Далее
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -202,16 +211,16 @@
                                     </div>
                                 </div>
                                 <?php
-                                    $fields = $checkout->get_checkout_fields('billing');
-                                    foreach ($fields as $key => $field) {
-                                        if (!in_array($field['label'], ['Имя', 'Телефон', 'Email', 'Населённый пункт'])) {
-                                            $field['return'] = true;
-                                            if ($field['label'] == 'Страна') {
-                                                $field['default'] = 'UA';
-                                            }
-                                            echo str_replace(['<select', '</select>', '<p', '</p>'], ['<div class="select-wrap"><select', '</select></div>', '<div', '</div>'], woocommerce_form_field($key, $field, $checkout->get_value($key)));
+                                $fields = $checkout->get_checkout_fields('billing');
+                                foreach ($fields as $key => $field) {
+                                    if (!in_array($field['label'], ['Имя', 'Телефон', 'Email', 'Населённый пункт'])) {
+                                        $field['return'] = true;
+                                        if ($field['label'] == 'Страна') {
+                                            $field['default'] = 'UA';
                                         }
+                                        echo str_replace(['<select', '</select>', '<p', '</p>'], ['<div class="select-wrap"><select', '</select></div>', '<div', '</div>'], woocommerce_form_field($key, $field, $checkout->get_value($key)));
                                     }
+                                }
                                 ?>
 
                                 <?php do_action('woocommerce_checkout_shipping'); ?>
@@ -238,22 +247,28 @@
                             <?php do_action('woocommerce_login_form_start'); ?>
 
                             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                <label for="username"><?php _e('Username or email address', 'woocommerce'); ?> <span class="required">*</span></label>
-                                <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username"
+                                <label for="username"><?php _e('Username or email address', 'woocommerce'); ?> <span
+                                            class="required">*</span></label>
+                                <input type="text" class="woocommerce-Input woocommerce-Input--text input-text"
+                                       name="username" id="username"
                                        value="<?php echo (!empty($_POST['username'])) ? esc_attr($_POST['username']) : ''; ?>"/>
                             </p>
                             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                <label for="password"><?php _e('Password', 'woocommerce'); ?> <span class="required">*</span></label>
-                                <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password"/>
+                                <label for="password"><?php _e('Password', 'woocommerce'); ?> <span
+                                            class="required">*</span></label>
+                                <input class="woocommerce-Input woocommerce-Input--text input-text" type="password"
+                                       name="password" id="password"/>
                             </p>
 
                             <?php do_action('woocommerce_login_form'); ?>
 
                             <p class="form-row">
                                 <?php wp_nonce_field('woocommerce-login', 'woocommerce-login-nonce'); ?>
-                                <input type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e('Login', 'woocommerce'); ?>"/>
+                                <input type="submit" class="woocommerce-Button button" name="login"
+                                       value="<?php esc_attr_e('Login', 'woocommerce'); ?>"/>
                                 <label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
-                                    <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever"/>
+                                    <input class="woocommerce-form__input woocommerce-form__input-checkbox"
+                                           name="rememberme" type="checkbox" id="rememberme" value="forever"/>
                                     <span><?php _e('Remember me', 'woocommerce'); ?></span>
                                 </label>
                             </p>

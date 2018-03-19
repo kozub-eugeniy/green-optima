@@ -51,7 +51,7 @@ get_header(); ?>
     <section class="hot-wrapper">
         <div class="container">
             <div class="title-wrapper">
-                <img class="title-pic" src="/wp-content/themes/onrial/images/hot-icon.png" alt="">
+                <img class="title-pic" src="<?php echo get_template_directory_uri();?>/images/hot-icon.png" alt="">
                 <span class="title white">Горячие предложения</span>
             </div>
             <div class="hot-items">
@@ -96,7 +96,7 @@ get_header(); ?>
     <section class="about-wrapper">
         <div class="container">
             <div class="title-wrapper">
-                <img class="title-pic" src="/wp-content/themes/onrial/images/about-icon.png" alt="">
+                <img class="title-pic" src="<?php echo get_template_directory_uri();?>/images/about-icon.png" alt="">
                 <span class="title">О компании Green Optima</span>
             </div>
             <ul class="about-adv__list">
@@ -158,7 +158,7 @@ get_header(); ?>
     <section class="cat-wrapper">
         <div class="container">
             <div class="title-wrapper">
-                <img class="title-pic" src="/wp-content/themes/onrial/images/plant-icon.png" alt="">
+                <img class="title-pic" src="<?php echo get_template_directory_uri();?>/images/plant-icon.png" alt="">
                 <span class="title">Каталог растений</span>
             </div>
         </div>
@@ -200,7 +200,7 @@ get_header(); ?>
     <section class="news-wrapper">
         <div class="container">
             <div class="title-wrapper">
-                <img class="title-pic" src="/wp-content/themes/onrial/images/news-icon.png" alt="">
+                <img class="title-pic" src="<?php echo get_template_directory_uri();?>/images/news-icon.png" alt="">
                 <span class="title">Новости</span>
             </div>
             <div class="col-md-6">
@@ -256,21 +256,21 @@ get_header(); ?>
     <section class="partners-wrapper">
         <div class="container">
             <div class="title-wrapper">
-                <img class="title-pic" src="/wp-content/themes/onrial/images/partners-icon.png" alt="">
+                <img class="title-pic" src="<?php echo get_template_directory_uri();?>/images/partners-icon.png" alt="">
                 <span class="title">Наши партнеры</span>
             </div>
             <ul class="partners-list">
                 <li class="partners-item">
-                    <img class="partners-logo" src="/wp-content/themes/onrial/images/logo.png" alt="">
+                    <img class="partners-logo" src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="">
                 </li>
                 <li class="partners-item">
-                    <img class="partners-logo" src="/wp-content/themes/onrial/images/logo.png" alt="">
+                    <img class="partners-logo" src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="">
                 </li>
                 <li class="partners-item">
-                    <img class="partners-logo" src="/wp-content/themes/onrial/images/logo.png" alt="">
+                    <img class="partners-logo" src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="">
                 </li>
                 <li class="partners-item">
-                    <img class="partners-logo" src="/wp-content/themes/onrial/images/logo.png" alt="">
+                    <img class="partners-logo" src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="">
                 </li>
             </ul>
         </div>
@@ -280,7 +280,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-5">                
                     <div class="title-wrapper">
-                        <img class="title-pic" src="/wp-content/themes/onrial/images/contacts-icon.png" alt="">
+                        <img class="title-pic" src="<?php echo get_template_directory_uri();?>/images/contacts-icon.png" alt="">
                         <span class="title">Контакты</span>
                     </div>
                     <div class="contacts-info">
@@ -313,7 +313,7 @@ get_header(); ?>
                             <li class="address-item">Карта</li>
                         </ul>
                         <div class="address-content active">
-                            <img class="address-pic" src="/wp-content/themes/onrial/images/scheme.jpg" alt="">
+                            <img class="address-pic" src="<?php echo get_template_directory_uri();?>/images/scheme.jpg" alt="">
                         </div>
                         <div class="address-content">
                             <div id="map"></div>
