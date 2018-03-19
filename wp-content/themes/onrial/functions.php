@@ -212,6 +212,53 @@ class Sublevel_Walker extends Walker_Nav_Menu {
         $args->after = '</div>';
         $output .= "$indent</ul>\n";
     }
+    function start_el( &$output, $item, $depth, $args ) {
+        global $wp_query;
+        $indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
+
+        // depth dependent classes
+        $depth_classes = array(
+            ( $depth == 0 ? 'main-submenu__item' : 'sub-menu-item' ),
+            ( $depth >=2 ? 'sub-sub-menu-item' : '' ),
+            ( $depth % 2 ? 'menu-item-odd' : 'menu-item-even' ),
+            'menu-item-depth-' . $depth
+        );
+        $depth_class_names = esc_attr( implode( ' ', $depth_classes ) );
+
+        // passed classes
+        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+        $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
+
+        // build html
+        $output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '"><div class="main-submenu__item-inner">';
+
+        if(!empty($classes[0])){
+            $args->before = '<i class="main-submenu__icon '.$classes[0].'"></i>';
+        }
+
+        // link attributes
+        $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+        $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+        $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+        $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+        $attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-submenu__link' ) . ( $item->title == 'АКЦИИ!' ? ' action-link' : '' ) . '"';
+
+        $item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
+            $args->before,
+            $attributes,
+            $args->link_before,
+            apply_filters( 'the_title', $item->title, $item->ID ),
+            $args->link_after,
+            $args->after
+        );
+
+        // build html
+        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+    }
+
+    function end_el( &$output, $category, $depth = 0, $args = array() ) {
+        $output .= "</div></li>\n";
+    }
 }
 /*
 class magomra_walker_nav_menu extends Walker_Nav_Menu {
