@@ -30,7 +30,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 <div class="col-md-4 col-xs-6">
     <div class="catalog-item">
         <div class="catalog-item__pic-wrapper">
-            <span class="catalog-label"></span>
            <?php /**
             * woocommerce_before_shop_loop_item_title hook.
             *
