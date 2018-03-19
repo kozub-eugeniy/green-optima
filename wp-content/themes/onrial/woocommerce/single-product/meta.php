@@ -22,10 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 ?>
-<div class="product-id">
-
-	<strong>Код товара: </strong><span><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span>
-</div>
+<!--<div class="product-id">-->
+<!---->
+<!--	<strong>Код товара: </strong><span>--><?php //echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?><!--</span>-->
+<!--</div>-->
 	<?php
 		$availability = $product->get_availability();
 		if(isset($availability['class']) && $availability['class'] == 'in-stock'){ ?>
