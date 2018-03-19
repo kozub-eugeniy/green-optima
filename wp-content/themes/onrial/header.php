@@ -42,19 +42,8 @@
                             </a>
                         <?php }?>
                         <span class="logo-descr">Питомник растений</span>
-                    </div>   
-                    <div class="search-wrapper">
-                        <form class="main-search">
-                            <div class="search-inner">
-                                <input class="search-field" type="text" name="search" placeholder="Поиск товаров по каталогу">
-                                <button class="search-field-btn">поиск</button>
-                            </div>
-                            <div class="search-example__wrapper">
-                                Например, <span class="search-example">туя западная, лиственница</span>
-                            </div>
-                        </form>
-                        <?php// echo do_shortcode('[yith_woocommerce_ajax_search]'); ?>
-                    </div>                 
+                    </div>
+                    <?php echo do_shortcode('[yith_woocommerce_ajax_search]'); ?>
                 </div>
                 <div class="col-md-6 main-header__right">
                     <div class="price-wrapper">

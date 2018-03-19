@@ -17,7 +17,7 @@ jQuery(document).ready(function ($) {
 
     search_button.on('click', function(){
         var form = $(this).closest('form');
-        if( form.find('.yith-s').val()==''){
+        if(form.find('.search-field').val()==''){
             return false;
         }
         return true;
@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
 
     el.each(function () {
         var $t = $(this),
-            append_to = ( typeof  $t.data('append-to') == 'undefined') ? $t.closest('.yith-ajaxsearchform-container') : $t.closest( $t.data('append-to') );
+            append_to = ( typeof  $t.data('append-to') == 'undefined') ? $t.closest('.search-wrapper') : $t.closest( $t.data('append-to') );
 
         $t.yithautocomplete({
             minChars        : min_chars,
