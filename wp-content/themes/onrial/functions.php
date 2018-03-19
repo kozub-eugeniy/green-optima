@@ -256,9 +256,7 @@ class Sublevel_Walker extends Walker_Nav_Menu {
 }
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
-/* API Maps */
 
-//}
 //add_action( 'wp_enqueue_scripts', 'my_theme_add_scripts' );
 
 if ( ! function_exists( 'wc_dropdown_variation_attribute_options' ) ) {
