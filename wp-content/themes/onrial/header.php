@@ -194,15 +194,15 @@
                         </ul>
                     </div>
                     <span class="header-sep-line"></span>
-                    <div class="cart-wrapper">
+                    <a class="cart-wrapper" href="/checkout/">
                         <i class="cart-icon">
-                            <span class="cart-counter">2</span>
+                            <span class="cart-counter"><?php echo WC()->cart->get_cart_contents_count();?></span>
                         </i>
                         <div class="cart-inner">
                             <span class="cart-text">Корзина</span>
-                            <span class="cart-sum">5 200 грн</span>
+                            <span class="cart-sum"><?php echo WC()->cart->get_cart_subtotal();?></span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
