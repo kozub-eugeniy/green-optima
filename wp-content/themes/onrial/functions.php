@@ -212,7 +212,7 @@ class Sublevel_Walker extends Walker_Nav_Menu {
 
         // depth dependent classes
         $depth_classes = array(
-            ( $depth == 0 ? 'main-submenu__item' : 'sub-menu-item' ),
+            ( $depth == 0 ? 'main-submenu__item' : 'secondary-submenu__item' ),
             ( $depth >=2 ? 'sub-sub-menu-item' : '' ),
             ( $depth % 2 ? 'menu-item-odd' : 'menu-item-even' ),
             'menu-item-depth-' . $depth
@@ -224,10 +224,13 @@ class Sublevel_Walker extends Walker_Nav_Menu {
         $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
 
         // build html
-        $output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '"><div class="main-submenu__item-inner">';
+        $output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '">'.($depth == 0 ? '<div class="main-submenu__item-inner">' : '');
 
-        if(!empty($classes[0])){
+        if($depth == 0 && !empty($classes[0]) && !in_array('secondary-submenu__item', $depth_classes)){
             $args->before = '<i class="main-submenu__icon '.$classes[0].'"></i>';
+            $args->after = '';
+        }else{
+            $args->before = '';
         }
 
         // link attributes
@@ -235,7 +238,7 @@ class Sublevel_Walker extends Walker_Nav_Menu {
         $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
         $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
         $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-        $attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-submenu__link' ) . ( $item->title == 'АКЦИИ!' ? ' action-link' : '' ) . '"';
+        $attributes .= ' class="menu-link ' . ( $depth > 0 ? 'secondary-submenu__link' : 'main-submenu__link' ) . ( $item->title == 'АКЦИИ!' ? ' action-link' : '' ) . '"';
 
         $item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
             $args->before,
@@ -251,7 +254,7 @@ class Sublevel_Walker extends Walker_Nav_Menu {
     }
 
     function end_el( &$output, $category, $depth = 0, $args = array() ) {
-        $output .= "</div></li>\n";
+        $output .= ($depth == 0 ?"</div>":"")."</li>\n";
     }
 }
 

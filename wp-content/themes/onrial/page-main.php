@@ -166,8 +166,7 @@ get_header(); ?>
         <?php
              $args = array(
                 'type'         => 'product',
-                'child_of'     => 0,
-                'parent'       => '',
+                'parent'       => 86,
                 'orderby'      => 'id',
                 'order'        => 'ASC',
                 'hide_empty'   => 0,

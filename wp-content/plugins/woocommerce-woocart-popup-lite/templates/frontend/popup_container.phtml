@@ -1,4 +1,17 @@
-<div id="festi-cart-pop-up-bg"></div>
+<div class="mfp-hide">
+    <div id="festi-cart-pop-up-content" class="order-popup">
+        <span class="order-popup__title">Корзина с товаром</span>
+        <div class="order-popup-wrapper order-main-wrapper">
+            <?php echo $content;?>
+            <div class="order-popup__btns">
+                <a class="order-popup__btn-resume" href="#" onclick="jQuery.magnificPopup.close()">Продолжить покупки</a>
+                <button class="order-popup__btn-buy" onclick="window.location='/checkout/'">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div style="display:none; " class="festi-cart-pop-up-content" id="festi-cart-pop-up-content">
     <span class="festi-cart-closed b-close"><span class="festi-cart-closed-button">&times;</span></span>
     <div class="festi-cart-pop-up-body">

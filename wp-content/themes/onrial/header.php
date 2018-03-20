@@ -25,6 +25,14 @@
 
     <?php wp_head(); ?>
 
+    <style>
+        .mfp-content #festi-cart-pop-up-content{
+            display: block !important;
+        }
+        .festi-cart-pop-up-body{
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body <?php body_class(); ?>>

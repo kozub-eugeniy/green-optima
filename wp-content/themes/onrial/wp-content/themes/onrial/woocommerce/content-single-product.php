@@ -57,7 +57,6 @@ global $product;
         <div class="col-sm-7">
 
 <!--	<div class="summary entry-summary">-->
-
             <?php
                 /**
                  * woocommerce_single_product_summary hook.

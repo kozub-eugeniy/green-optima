@@ -20,9 +20,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header(); ?>
+get_header();
+$category_thumbnail = get_woocommerce_term_meta(get_queried_object()->term_id, 'thumbnail_id', true);
+$image = wp_get_attachment_url($category_thumbnail);
+?>
 
-<div class="catalog-banner">
+<div class="catalog-banner" style="<?=empty($image)?'':'background-image: url('.$image.');'?>">
     <div class="container">
         <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
         <span class="catalog-title"><?php woocommerce_page_title(); ?></span>

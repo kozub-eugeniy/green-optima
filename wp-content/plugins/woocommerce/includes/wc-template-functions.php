@@ -805,7 +805,7 @@ if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
 
 		$image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
 
-		return $product ? $product->get_image( $image_size ) : '';
+		return '<a href="' . esc_url( get_the_permalink() ) . '">' . ($product ? $product->get_image( $image_size ) : '') . '</a>';
 	}
 }
 

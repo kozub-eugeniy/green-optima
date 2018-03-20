@@ -198,10 +198,16 @@ jQuery( document ).ready(function() {
     }
 
     jQuery('body').on('added_to_cart',function() {
-        jQuery('#festi-cart-pop-up-content').bPopup({
-            modalClose: true,
-            positionStyle: 'fixed'
-        });
+        //jQuery('#festi-cart-pop-up-content').bPopup({
+        //    modalClose: true,
+        //    positionStyle: 'fixed'
+        //});
+        jQuery.magnificPopup.open({
+            items: {
+                src: '#festi-cart-pop-up-content'
+            },
+            type: 'inline'
+        }, 0);
     });
     
-})
+});

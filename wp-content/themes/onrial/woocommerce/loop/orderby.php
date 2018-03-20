@@ -21,10 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<form class="catalog-sort__wrapper" method="get">
+<form class="catalog-sort__wrapper woocommerce-ordering" method="get">
         <i class="filter-btn"></i>
         <span class="catalog-sort__title">Сортировка:</span>
-        <select class="catalog-sort__list">
+        <select class="catalog-sort__list orderby" name="orderby">
 		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
 		<?php endforeach; ?>
