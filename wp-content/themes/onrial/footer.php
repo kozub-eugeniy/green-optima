@@ -9,22 +9,22 @@
             </div>                
             <ul class="footer-list">
                 <li class="footer-list__item">
-                    <a class="footer-list__link" href="">Ландшафтный дизайн</a>
+                    <a class="footer-list__link" href="/landscape-design/">Ландшафтный дизайн</a>
                 </li>
                 <li class="footer-list__item">
                     <a class="footer-list__link bold-link" href="">Каталог растений</a>
                 </li>
                 <li class="footer-list__item">
-                    <a class="footer-list__link" href="">О компании</a>
+                    <a class="footer-list__link" href="/about/">О компании</a>
                 </li>
                 <li class="footer-list__item">
-                    <a class="footer-list__link" href="">Садовые центры</a>
+                    <a class="footer-list__link" href="/garden-centers/">Садовые центры</a>
                 </li>
                 <li class="footer-list__item">
-                    <a class="footer-list__link" href="">Новости</a>
+                    <a class="footer-list__link" href="/news/">Новости</a>
                 </li>
                 <li class="footer-list__item">
-                    <a class="footer-list__link" href="">Контакты</a>
+                    <a class="footer-list__link" href="/contacts/">Контакты</a>
                 </li>
             </ul>
             <ul class="footer-list">
@@ -32,13 +32,13 @@
                     <span class="footer-list__link bold-link">Инфо</span>
                 </li>
                 <li class="footer-list__item">
-                    <a class="footer-list__link" href="">Доставка и оплата</a>
+                    <a class="footer-list__link" href="/shipping-and-payment/">Доставка и оплата</a>
                 </li>
                 <li class="footer-list__item">
-                    <a class="footer-list__link" href="">Подарочные сертификаты</a>
+                    <a class="footer-list__link" href="/gift-certificates/">Подарочные сертификаты</a>
                 </li>
                 <li class="footer-list__item">
-                    <a class="footer-list__link" href="">Полезные статьи</a>
+                    <a class="footer-list__link" href="/events/">Полезные статьи</a>
                 </li>
             </ul>
             <div class="footer-socials">

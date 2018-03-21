@@ -117,7 +117,7 @@
                     <a class="main-menu__link" href="/about/">О компании</a>
                 </li>
                 <li class="main-menu__item">
-                    <a class="main-menu__link" href="">Садовые центры</a>
+                    <a class="main-menu__link" href="/garden-centers/">Садовые центры</a>
                 </li>
                 <li class="main-menu__item">
                     <a class="main-menu__link" href="/events/">События</a>
