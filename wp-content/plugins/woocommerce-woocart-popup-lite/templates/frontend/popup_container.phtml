@@ -5,7 +5,9 @@
             <?php echo $content;?>
             <div class="order-popup__btns">
                 <a class="order-popup__btn-resume" href="#" onclick="jQuery.magnificPopup.close()">Продолжить покупки</a>
-                <button class="order-popup__btn-buy" onclick="window.location='/checkout/'">Оформить заказ</button>
+                <?php if(WC()->cart->get_cart_contents_count() > 0){?>
+                    <button class="order-popup__btn-buy" onclick="window.location='/checkout/'">Оформить заказ</button>
+                <?php }?>
             </div>
         </div>
     </div>

@@ -135,8 +135,7 @@
                                        data-validate-required="Обязательное поле" placeholder="Введите Ваш E-mail">
                                 <small class="order-form__input-footnote">(чтобы отслеживать заказ)</small>
                             </div>
-                            <button type="button" class="btn btn--accent order-form__btn"
-                                    onclick="jQuery('#first-step, .ordering-tabs-captions').slideUp(); jQuery('#second-step').slideDown();">
+                            <button id="cartStep" type="button" class="btn btn--accent order-form__btn">
                                 Оформить заказ
                             </button>
                         </div>
@@ -198,3 +197,45 @@
         </div>
     </div>
 </div>
+<script>
+//    onclick="jQuery('#first-step, .ordering-tabs-captions').slideUp(); jQuery('#second-step').slideDown();"
+    jQuery(document).ready(function () {
+        jQuery('#cartStep').on('click', function (e) {
+            e.preventDefault();
+            if(validate()){
+                jQuery('#first-step, .ordering-tabs-captions').slideUp(); jQuery('#second-step').slideDown();
+            }
+            jQuery('.error').each(function () {
+                jQuery(this).on('change', function () {
+                    if (jQuery(this).val() != '') {
+                        jQuery(this).removeClass('error');
+                        jQuery(this).parent().find('span').hide();
+                    }
+                });
+            });
+        });
+    });
+    function validate(){
+        var name = jQuery("input[name='name']").val(),
+            email = jQuery("input[name='email']").val(),
+            phone = jQuery("input[name='phone']").val();
+
+        var reg = /^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$/;
+//            regPhone = /^[\w+]{1}[0-9]{5,15}$/;
+
+        if(name==""){
+            jQuery("input[name='name']").addClass('error');
+        }
+        if(phone==""){ //!regPhone.test(phone)
+            jQuery("input[name='phone']").addClass('error');
+        }
+        if(email=="" || !reg.test(email)){
+            jQuery("input[name='email']").addClass('error');
+        }
+
+        if(name=="" || phone=="" || email=="" || !reg.test(email)){// !regPhone.test(phone)
+            return false;
+        }
+        return true;
+    }
+</script>

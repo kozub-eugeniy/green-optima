@@ -19,7 +19,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-if(0) {
+//if(0) {
     if ($max_value && $min_value === $max_value) {
         ?>
         <div class="quantity hidden">
@@ -37,4 +37,4 @@ if(0) {
                pattern="<?php echo esc_attr($pattern); ?>" inputmode="<?php echo esc_attr($inputmode); ?>"/>
     <?php
     }
-}
+//}
