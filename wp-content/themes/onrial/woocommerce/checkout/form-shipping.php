@@ -27,16 +27,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( apply_filters( 'woocommerce_enable_order_notes_field', 'yes' === get_option( 'woocommerce_enable_order_comments', 'yes' ) ) ) : ?>
 
 		<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
-
 			<h3><?php _e( 'Additional information', 'woocommerce' ); ?></h3>
-
 		<?php endif; ?>
 
-		<div class="woocommerce-additional-fields__field-wrapper">
+		<div class="order-form__text-wrapper">
 			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
+
 				<?php
-					if($field['label'] == 'Order Notes'){
-						$field['label'] = 'Примечание к заказу';
+					if($field['label']){
+                        $field['label'] = "Комментарий:";
 					}
 				?>
 				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>

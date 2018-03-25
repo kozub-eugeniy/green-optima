@@ -56,8 +56,21 @@
                 <div class="col-md-6 main-header__right">
                     <div class="price-wrapper">
                         <div class="header-info__wrapper">
-                            <i class="header-info__icon"></i>
-                            <span class="header-info__txt">Инфо</span>
+                            <div class="header-info__inner">
+                                <i class="header-info__icon"></i>
+                                <span class="header-info__txt">Инфо</span>
+                            </div>
+                            <ul class="header-info__list">
+                                <li class="header-info__item">
+                                    <a class="header-info__link" href="/events/">Статьи</a>
+                                </li>
+                                <li class="header-info__item">
+                                    <a class="header-info__link" href="/shipping-and-payment/">Доставка и оплата</a>
+                                </li>
+                                <li class="header-info__item">
+                                    <a class="header-info__link" href="/gift-certificates/">Подарочные сертификаты</a>
+                                </li>
+                            </ul>
                         </div>
                         <a href="" class="price-download" target="_blank">
                             <i class="price-download__icon"></i>
@@ -131,153 +144,7 @@
                         <i class="main-menu__icon-design"></i>
                     </a>
                 </li>
-
-            <!--
-            <ul class="main-menu__list">
-                <li class="main-menu__item main-menu__btn">
-                    <div class="main-menu__btn-icon__wrapper"><i class="main-menu__btn-icon"><span></span></i></div>
-                    <a class="main-menu__link" href="">Каталог растений</a>
-                    <div class="main-submenu">
-                    	<ul class="main-submenu__list">
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi1"></i>
-                    			<a class="main-submenu__link" href="">Хвойные деревья</a></div>
-                    			<ul class="secondary-submenu first">
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Ель</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Можевельник</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Кипарисовик</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Пихта</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Сосна</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Тис</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Туя</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Тсуга</a>
-                    				</li>
-                    			</ul>
-                    		</li>
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi2"></i>
-                    			<a class="main-submenu__link" href="">Аллейные деревья</a></div>
-                    			<ul class="secondary-submenu">
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Ель</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Можевельник</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Кипарисовик</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Пихта</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Сосна</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Тис</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Туя</a>
-                    				</li>
-                    				<li class="secondary-submenu__item">
-                    					<a class="secondary-submenu__link" href="">Тсуга</a>
-                    				</li>
-                    			</ul>
-                    		</li>
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi3"></i>
-                    			<a class="main-submenu__link" href="">Лиственные кустарники</a></div>
-                    		</li>
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi4"></i>
-                    			<a class="main-submenu__link" href="">Розы</a></div>
-                    		</li>
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi5"></i>
-                    			<a class="main-submenu__link" href="">Многолетники</a></div>
-                    		</li>
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi6"></i>
-                    			<a class="main-submenu__link" href="">Лианы</a></div>
-                    		</li>
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi7"></i>
-                    			<a class="main-submenu__link" href="">Бонсаи и топиарные формы</a></div>
-                    		</li>
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi8"></i>
-                    			<a class="main-submenu__link" href="">Однолетние растения</a></div>
-                    		</li>
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi9"></i>
-                    			<a class="main-submenu__link" href="">Удобрения и сопутствующие товары</a></div>
-                    		</li>
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi10"></i>
-                    			<a class="main-submenu__link" href="">Автоматический полив</a></div>
-                    		</li>
-                    		<li class="main-submenu__item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi11"></i>
-                    			<a class="main-submenu__link action-link" href="">АКЦИИ!</a></div>
-                    		</li>
-                    		<li class="main-submenu__item hidden-item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi11"></i>
-                    			<a class="main-submenu__link action-link" href="">О компании</a></div>
-                    		</li>
-                    		<li class="main-submenu__item hidden-item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi11"></i>
-                    			<a class="main-submenu__link action-link" href="">Садовые центры</a></div>
-                    		</li>
-                    		<li class="main-submenu__item hidden-item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi11"></i>
-                    			<a class="main-submenu__link action-link" href="">События</a></div>
-                    		</li>
-                    		<li class="main-submenu__item hidden-item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi11"></i>
-                    			<a class="main-submenu__link action-link" href="">Контакты</a></div>
-                    		</li>
-                    		<li class="main-submenu__item hidden-item">
-                    			<div class="main-submenu__item-inner"><i class="main-submenu__icon mi11"></i>
-                    			<a class="main-submenu__link action-link" href="">Ландшафтный дизайн</a></div>
-                    		</li>
-                    	</ul>
-                    </div>
-                </li>
-                <li class="main-menu__item">
-                    <a class="main-menu__link" href="/about/">О компании</a>
-                </li>
-                <li class="main-menu__item">
-                    <a class="main-menu__link" href="">Садовые центры</a>
-                </li>
-                <li class="main-menu__item">
-                    <a class="main-menu__link" href="/events/">События</a>
-                </li>
-                <li class="main-menu__item">
-                    <a class="main-menu__link" href="/contacts/">Контакты</a>
-                </li>
-                <li class="main-menu__item main-menu__item-design">
-                    <a class="main-menu__link main-menu__link-design" href="">
-                        <span class="main-menu__txt-design">Ландшафтный <br>дизайн</span>
-                        <i class="main-menu__icon-design"></i>
-                    </a>
-                </li>
             </ul>
-        -->
         </div>
     </nav>
 </header>

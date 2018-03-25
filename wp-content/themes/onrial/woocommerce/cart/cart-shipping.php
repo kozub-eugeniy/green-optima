@@ -29,15 +29,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 					$new_available_methods = array('nova_poshta_shipping_method' => $available_methods['nova_poshta_shipping_method']);
 					unset($available_methods['nova_poshta_shipping_method']);
 					$available_methods = array_merge($new_available_methods, $available_methods);
-					$chosen_method = 'nova_poshta_shipping_method';
+//					$chosen_method = 'nova_poshta_shipping_method';
+					$chosen_method = 'local_pickup:2';
 				}
 				$index = 0;
 			?>
-			<div class="select-wrap">
-				<select name="shipping_method[<?php echo $index; ?>]" data-index="<?php echo $index; ?>" id="shipping_method_<?php echo $index; ?>" class="shipping_method">
-					<option value=""><?php _e("Выберите метод доставки", 'woo-shipping-display-mode'); ?></option>
+			<div class="select-wrap product-select__wrapper">
+				<select name="shipping_method[<?php echo $index; ?>]" data-index="<?php echo $index; ?>" id="shipping_method_<?php echo $index; ?>" class="order-form__input product-select">
+<!--					<option value="">--><?php //_e("Выберите метод доставки", 'woo-shipping-display-mode'); ?><!--</option>-->
 					<?php foreach ($available_methods as $method) : ?>
-						<option value="<?php echo esc_attr($method->id); ?>" <?php selected($method->id, $chosen_method); ?>><?php echo wp_kses_post(wc_cart_totals_shipping_method_label($method)); ?></option>
+						<option <?php selected($method->id, $chosen_method); ?> value="<?php echo esc_attr($method->id); ?>"><?php echo wp_kses_post(wc_cart_totals_shipping_method_label($method)); ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>

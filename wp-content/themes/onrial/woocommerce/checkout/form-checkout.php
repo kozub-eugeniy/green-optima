@@ -144,10 +144,10 @@
                 </div>
                 <div id="second-step" style="display: none;">
                     <div id="customer_details">
-
                         <div class="row">
-                            <div class="col-xs-6">
-                                <div class="woocommerce-shipping-method">
+                            <div class="col-xs-12">
+                                <div class="order-form__input-wrapper">
+                                    <label class="order-form__label">Выберите способ доставки:</label>
                                     <?php if (WC()->cart->needs_shipping() && WC()->cart->show_shipping()) : ?>
 
                                         <?php do_action('woocommerce_review_order_before_shipping'); ?>
@@ -159,8 +159,11 @@
                                     <?php endif; ?>
                                 </div>
                             </div>
-                            <div class="col-xs-6">
-                                <?php woocommerce_checkout_payment(); ?>
+                            <div class="col-xs-12">
+                                <div class="order-form__input-wrapper">
+                                    <label class="order-form__label">Выберите способ оплаты:</label>
+                                    <?php woocommerce_checkout_payment(); ?>
+                                </div>
                             </div>
                         </div>
                         <?php
@@ -183,11 +186,10 @@
                         <?php wp_nonce_field('woocommerce-process_checkout'); ?>
 
                     </div>
-
                     <div class="ordering-new-form">
                         <div class="row">
-                            <div class="col-sm-6 col-sm-offset-6">
-                                <?php echo apply_filters('woocommerce_order_button_html', '<input type="submit" class="btn btn--accent" name="woocommerce_checkout_place_order" id="place_order" onclick="jQuery(\'form.checkout\').submit()" value="Подтвердить заказ" data-value="Подтвердить заказ" />'); ?>
+                            <div class="col-xs-12">
+                                <?php echo apply_filters('woocommerce_order_button_html', '<input type="submit" class="btn btn--accent order-form__btn" name="woocommerce_checkout_place_order" id="place_order" onclick="jQuery(\'form.checkout\').submit()" value="Подтвердить заказ" data-value="Подтвердить заказ" />'); ?>
                             </div>
                         </div>
                     </div>

@@ -23,9 +23,9 @@ if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
 ?>
-<div id="payment" class="woocommerce-checkout-payment select-wrap">
+<div class="select-wrap product-select__wrapper">
 	<?php if ( WC()->cart->needs_payment() ) : ?>
-		<select name="payment_method">
+		<select name="payment_method" class="order-form__input product-select">
 		<?php
 				if ( ! empty( $available_gateways ) ) {
 					foreach ( $available_gateways as $gateway ) {

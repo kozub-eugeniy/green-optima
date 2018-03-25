@@ -28,147 +28,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<!--
-<header class="header">
-    <div class="top-line">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8">
-                    <?php //wp_nav_menu(array(
-                        //'menu' => 'headMenu',
-                        //'menu_class' => 'top-mnu',
-                    //)); ?>
-                <div class="col-sm-2 col-right">
-                    <a href="/cart" class="cart-btn">
-                        <img src="<?php// echo get_template_directory_uri(); ?>/img/ico-cart.png" alt="" class="">
-                        <span class="cart-btn__amount"><?php //echo WC()->cart->get_cart_contents_count(); ?></span>
-                        <span class="cart-btn__price"><?php //echo WC()->cart->get_cart_subtotal(); ?></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="logo-line">
-            <div class="row">
-                <div class="col-xs-7 col-sm-6">
-                    <a href="/" class="logo">
-                        <img src="<?php //echo get_template_directory_uri(); ?>/img/logo.png" alt="">
-                    </a>
-                    <span class="main-descr">Питомник растений</span>
-                </div>
-				
-                <div class="col-xs-5 col-right col-sm-6">
-                    <a href="javascript:void(0)" data-mfp-src="#consult-popup" class="btn header-popup popup-btn">Обратный звонок</a>
-                    <ul class="header-phones">
-                        <li>+38 (‎‎096) 600 01 55</li>
-                        <li><img src="<?php //echo get_template_directory_uri(); ?>/img/viber_logo.png">+38 (050) 600 01 55</li>
-                        <li>+38 (073) 600 01 55</li>
-                    </ul>
-                </div>
-				<ul class="footer-social">
-					<li><a href="https://www.facebook.com/lashonrial/" target="blank" class="footer-social__link"><i>&#xf09a</i></a></li>
-					<li><a href="https://www.instagram.com/onrial/" target="blank" class="footer-social__link"><i>&#xF16D</i></a></li>
-					
-				</ul>
-            </div>
-        </div>
-
-        <nav class="mnu-wrap clearfix">
-            <?php //wp_nav_menu(array(
-                //'menu' => 'mainMenu',
-                //'menu_class' => 'main-mnu',
-            //)); ?>
-            <div class="search-form">
-                <?php// echo do_shortcode('[yith_woocommerce_ajax_search]'); ?> 
-            </div>
-        </nav>
-        <div class="header-middle">
-            <h1 class="main-title">ПОЛУЧАЙТЕ МАКСИМАЛЬНОЕ УДОБСТВО И ПОДДЕРЖКУ,<br>
-                РАБОТАЯ С НАДЕЖНЫМ БИЗНЕС-ПАРТНЕРОМ</h1>
-            <h2 class="main-subtitle">Стань нашим клиентом сейчас и заработай скидку до 20% на этот и следующий месяц</h2>
-            <a href="javascript:void(0)" data-mfp-src="#prod-popup-old" class="btn header-content__btn popup-btn">Получить скидку</a>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="header-advantage">
-                    <img src="<?php// echo get_template_directory_uri(); ?>/img/ico-advantages_1.png" class="header-advantage__icon" alt="">
-                    <span class="header-advantage__text">Собственное производство <br> В Южной Корее</span>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="header-advantage">
-                    <img src="<?php //echo get_template_directory_uri(); ?>/img/ico-advantages_2.png" class="header-advantage__icon" alt="">
-                    <span class="header-advantage__text">Продукция одобрена <br> Ассоциацией дерматологов</span>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="header-advantage">
-                    <img src="<?php //echo get_template_directory_uri(); ?>/img/ico-advantages_3.png" class="header-advantage__icon" alt="">
-                    <span class="header-advantage__text">Контроль качества <br> и обязательная сертификация</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<div id="fixed_menu">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<nav>
-					<img src="<?php// echo get_template_directory_uri(); ?>/img/logo.png" alt="" class="logo">
-					<?php //wp_nav_menu(array(
-                        //'menu' => 'fixedMenu',
-                        //'menu_class' => 'top-mnu hidden-sm',
-                    //)); ?>
-					<div id="fixed_submenu">
-						<label for="fixed_submenu_trigger">
-							<span class="hidden-xs hidden-sm">Еще</span>
-							<img src="<?php// echo get_template_directory_uri(); ?>/img/menu.png" alt="" class="">
-							<span class="visible-sm">Меню</span>
-						</label>
-						<input type="checkbox" class="hidden" id="fixed_submenu_trigger" name="fixed_submenu_trigger">
-						<div>
-							<div class="left">
-								<?php //wp_nav_menu(array(
-									//'menu' => 'fixedMenu',
-									//'menu_class' => 'top-mnu visible-xs visible-sm',
-								//)); ?>
-								<?php //wp_nav_menu(array(
-									//'menu' => 'fixedSubmenu'
-								//)); ?>
-							</div>
-							<div class="right">
-								<ul class="header-phones">
-									<li>+38 (‎‎096) 600 01 55</li>
-									<li>+38 (050) 600 01 55</li>
-									<li>+38 (073) 600 01 55</li>
-								</ul>
-								<ul class="footer-social" style="width: 100%;">
-									<li><a href="https://www.facebook.com/lashonrial/" target="blank" class="footer-social__link"><i>&#xf09a</i></a></li>
-									<li><a href="https://www.instagram.com/onrial/" target="blank" class="footer-social__link"><i>&#xF16D</i></a></li>
-								</ul>
-								<a href="javascript:void(0)" data-mfp-src="#consult-popup" class="btn header-popup popup-btn">Обратный звонок</a>
-							</div>
-						</div>
-					</div>
-					<a href="http://onrial.imsmedia.in.ua/account/edit-account/"><img src="<?php //echo get_template_directory_uri(); ?>/img/users.png" alt="" class="profile"></a>
-					<div class="search-form">
-						<?php// echo do_shortcode('[yith_woocommerce_ajax_search]'); ?> 
-					</div>
-					<a href="/checkout/" class="cart-btn">
-                        <img src="<?php// echo get_template_directory_uri(); ?>/img/ico-cart.png" alt="" class="">
-                        <span class="cart-btn__amount"><?php// echo WC()->cart->get_cart_contents_count(); ?></span>
-                        <span class="cart-btn__price"><?php// echo WC()->cart->get_cart_subtotal(); ?></span>
-                    </a>
-				</nav>
-			</div>
-		</div>
-	</div>
-	<div id="toHeader" onclick="jQuery('html, body').animate({scrollTop: 0}, 800)"><img src="<?php// echo get_template_directory_uri(); ?>/img/download.png">Вверх</div>
-</div>
--->
-<header class="header">
+<header class="header header-landscape">
     <div class="main-header">
         <div class="container">
             <div class="main-header__container">
@@ -211,7 +71,7 @@
     </div>
     <nav class="main-menu">
         <div class="container">
-            <ul class="main-menu__list land-menu__list">
+            <ul class="main-menu__list row land-menu__list">
                 <li class="main-menu__item main-menu__btn">
                     <div class="main-menu__btn-icon__wrapper land-menu__btn"><i class="main-menu__btn-icon"><span></span></i></div>
                     <a class="main-menu__link" href="/about/">О компании</a>
