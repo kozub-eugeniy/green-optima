@@ -30,7 +30,7 @@ echo wc_get_stock_html( $product );
 if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-
+    <?php woocommerce_template_single_price(); ?>
 	<form class="cart" method="post" enctype='multipart/form-data'>
 		<?php
 			/**
@@ -65,7 +65,12 @@ if ( $product->is_in_stock() ) : ?>
 			do_action( 'woocommerce_after_add_to_cart_button' );
 		?>
 	</form>
-
+    <form action="" class="product-fast-order__form pbz_form clear-styles" data-error-title="Ошибка отправки!" data-error-message="Попробуйте отправить заявку через некоторое время." data-success-title="Спасибо за заявку!" data-success-message="Наш менеджер свяжется с вами в ближайшее время.">
+        <div class="product-fast-order__wrapper">
+            <input class="product-fast-order__input" name="phone" data-validate-uaphone="Неправильный номер" data-validate-required="Обязательное поле" placeholder="Введите ваш телефон" type="text">
+            <button class="product-fast-order__btn">Купить в один клик</button>
+        </div>
+    </form>
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>

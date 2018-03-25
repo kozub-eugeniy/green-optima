@@ -32,6 +32,13 @@
         .festi-cart-pop-up-body{
             margin: 0 auto;
         }
+        .sidebar-filters__chck + label {
+            min-height: 20px;
+            height: auto;
+        }
+        .sidebar-filters__chck + label::after {
+            top: 0;
+        }
     </style>
 </head>
 
@@ -108,7 +115,7 @@
             <ul class="main-menu__list">
                 <li class="main-menu__item main-menu__btn">
                     <div class="main-menu__btn-icon__wrapper"><i class="main-menu__btn-icon"><span></span></i></div>
-                    <a class="main-menu__link" href="">Каталог растений</a>
+                    <a class="main-menu__link" href="/product-category/plants/">Каталог растений</a>
                     <div class="main-submenu">
                         <?php
                         $args = array(
