@@ -90,7 +90,7 @@
                         </ul>
                     </div>
                     <span class="header-sep-line"></span>
-                    <a class="cart-wrapper" href="/checkout/">
+                    <a class="cart-wrapper" href="<?php if(WC()->cart->get_cart_contents_count() > 0){ echo '/checkout/';}else{ echo 'javascript:void(0)';}?>">
                         <i class="cart-icon">
                             <span class="cart-counter"><?php echo WC()->cart->get_cart_contents_count();?></span>
                         </i>
